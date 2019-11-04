@@ -19,7 +19,7 @@
 				<td th:text="${producto.categorias}"></td>
 				<td th:text="${producto.cantidad}"></td>
 				<td>
-				<span th:if="${producto.cantidad != 0}">
+				<span th:if="${producto.cantidad != 0} or(${#authorization.expression('hasRole(''ROLE_ADMIN'')')})">
 				<a href="#" th:href="@{'/editProducto/'+ ${producto.id}}">
 				<i class="fas fa-edit"></i></a>
 				</span>	
