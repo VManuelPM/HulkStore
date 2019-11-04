@@ -27,9 +27,11 @@ Instalación 🔧
   5. Dar clic derecho en el proyecto -> Maven -> Update Project
   6. Correr el proyecto como Spring Boot app
   7. En un navegador escribir localhost:8010
-  8. Existen dos usuarios funcionando actualmente:
-    8.1. Usuario admin: user -> admin -> password: admin
-    8.2  Usuario vendedor: user -> juana -> password: juana
+  8. Existen dos usuarios funcionando actualmente: <br />
+    8.1. Usuario admin: Tiene Control absoluto de todas las operaciones en la BD <br />
+   ***** user -> admin -> password: admin <br />
+    8.2  Usuario vendedor: Puede modificar su información unicamente, en los productos si el stock de un producto llega a cero no puede realizar acciones en este, unicamente el admin puede volver a aumentar el stock  <br />
+  ***** user -> juana -> password: juana
 
 Deployment 📦
 
