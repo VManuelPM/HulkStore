@@ -23,7 +23,7 @@ Mysql
   1. Descargar el proyecto o clonarlo
   2. Abrir con Spring tool suite
   3. Crear una Base de datos con el nombre hulk_store
-  4. ir a src/main/java/util e importar en Mysql el archivo hulk_store.sql
+  4. Ir a src/main/java/util e importar en Mysql el archivo hulk_store.sql
   5. Dar clic derecho en el proyecto -> Maven -> Update Project
   6. Correr el proyecto como Spring Boot app
   7. En un navegador escribir localhost:8010
