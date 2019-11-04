@@ -28,9 +28,9 @@ Instalación 🔧
 
 Deployment 📦
 
--proyecto -> Maven -> Update Project
-  -Run as -> Spring Boot app
-    -localhost:8010
+1.proyecto -> Maven -> Update Project
+2. Run as -> Spring Boot app
+3. localhost:8010
 
 Construido con 🛠️
 
