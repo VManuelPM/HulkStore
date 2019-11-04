@@ -1,0 +1,41 @@
+<div class="table-responsive">
+	<table id="categoriaList"
+		class="table table-bordered table-hover table-striped">
+		<thead class="thead-light">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Nombre Categoria</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="categoria: ${categoriaList}">
+				<td th:text="${categoria.id}"></td>
+				<td th:text="${categoria.name}"></td>
+				<td>
+				<span th:if="${#authorization.expression('hasRole(''ROLE_ADMIN'')')} or (${#authorization.expression('hasRole(''ROLE_USER'')')} and ${#httpServletRequest.remoteUser==user.username})">
+				<a href="#" th:href="@{'/editCategoria/'+ ${categoria.id}}">
+				<i class="fas fa-edit"></i></a>
+				</span>	
+				 <span th:if="${#authorization.expression('hasRole(''ROLE_ADMIN'')')}" >
+				<a href="#" th:onclick="'javascript:confirmDelete(\''+ ${categoria.id} +'\');'"><i
+						class="fas fa-user-times"></i></a>
+					</td>
+				</span>
+			</tr>
+		</tbody>
+	</table>
+		<div class="alert alert-danger text-center" th:if="${listErrorMessage}" th:text="${listErrorMessage}">Error Message</div>
+</div>
+
+<script type="text/javascript">
+function confirmDelete(id){
+	$('#deleteModal').modal('show');
+	$("#categoriaIdHiddenInput").val(id);
+}
+
+function deleteCategoria(){
+	var id = $("#categoriaIdHiddenInput").val();
+    window.location = "deleteCategoria/"+id;
+}
+</script>

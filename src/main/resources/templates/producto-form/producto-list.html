@@ -1,0 +1,47 @@
+<div class="table-responsive">
+	<table id="productoList"
+		class="table table-bordered table-hover table-striped">
+		<thead class="thead-light">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Producto</th>
+				<th scope="col">Descripción</th>
+				<th scope="col">Categoria</th>
+				<th scope="col">Cantidad</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="producto: ${productoList}">
+				<td th:text="${producto.id}"></td>
+				<td th:text="${producto.producto}"></td>
+				<td th:text="${producto.descripcion}"></td>
+				<td th:text="${producto.categorias}"></td>
+				<td th:text="${producto.cantidad}"></td>
+				<td>
+				<span th:if="${producto.cantidad != 0}">
+				<a href="#" th:href="@{'/editProducto/'+ ${producto.id}}">
+				<i class="fas fa-edit"></i></a>
+				</span>	
+				 <span th:if="${#authorization.expression('hasRole(''ROLE_ADMIN'')')}" >
+				<a href="#" th:onclick="'javascript:confirmDelete(\''+ ${producto.id} +'\');'"><i
+						class="fas fa-user-times"></i></a>
+					</td>
+				</span>
+			</tr>
+		</tbody>
+	</table>
+		<div class="alert alert-danger text-center" th:if="${listErrorMessage}" th:text="${listErrorMessage}">Error Message</div>
+</div>
+
+<script type="text/javascript">
+function confirmDelete(id){
+	$('#deleteModal').modal('show');
+	$("#userIdHiddenInput").val(id);
+}
+
+function deleteUser(){
+	var id = $("#userIdHiddenInput").val();
+    window.location = "deleteProducto/"+id;
+}
+</script>
