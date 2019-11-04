@@ -33,14 +33,16 @@ Deployment 📦
     -localhost:8010
 
 Construido con 🛠️
-  Spring --> El framework mas popular de Java que facilita el desarrollo con J2EE
-  Spring tool suite 4 --> Ide de desarollo basada en eclipse para Spring
-  Spring Security --> Gestiona todo lo relacionado con la seguridad de nuestra aplicación
-  Spring Boot --> Simplifica los pasos de seleccionar los jars con Maven y desplegarlos
-  Mysql --> Base de datos mas popular en aplicativos web
-  Bootstrap --> Framework que permite agilizar el estilo de la página
-  
 
+  1. Spring --> El framework mas popular de Java que facilita el desarrollo con J2EE
+  2. Spring tool suite 4 --> Ide de desarollo basada en eclipse para Spring
+  3. Spring Security --> Gestiona todo lo relacionado con la seguridad de nuestra aplicación
+  4. Spring Boot --> Simplifica los pasos de seleccionar los jars con Maven y desplegarlos
+  5. Mysql --> Base de datos mas popular en aplicativos web
+  6. Bootstrap --> Framework que permite agilizar el estilo de la página
+  7. JPA y Hibernate --> Facilidad de Persistencia en la base de datos
+  8. Thymleaf --> Permite añadir atributos y etiquetas en el HTML, permite que las tareas de diseño y programación se pueden llevar     conjuntamente.
+  
 Este proyecto está bajo la Licencia de VManuelPM
 
 Expresiones de Gratitud 🎁
